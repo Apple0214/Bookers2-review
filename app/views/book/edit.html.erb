@@ -1,2 +1,25 @@
-<h1>Book#edit</h1>
-<p>Find me in app/views/book/edit.html.erb</p>
+<div class="body">
+  <div class="container">
+	  <div class="row">
+		  <div class="col-bd-6 col-md-offset-3">
+<h1>Editing Book</h1>
+<%= render partial:'error_messages' %>
+<%= form_for(@book) do |f| %>
+<div class="field row">
+ <h3>Title</h3>
+<%= f.text_field :title %>
+</div>
+<div class="field row">
+<h3>Opinion</h3>
+<%= f.text_field :body %>
+</div>
+ <div class="actions row">
+<%= f.submit 'Update Book' %>
+</div>
+<%= link_to 'Show', book_path(@book) %>
+<%= link_to 'Back', books_path %>
+<% end %>
+</div>
+</div>
+</div>
+</div>
